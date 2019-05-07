@@ -39,6 +39,26 @@ include::../shared-doc/back-up-server-standalone-configuration.adoc[leveloffset=
 // Start the {productName} Standalone Server
 include::../shared-doc/start-the-standalone-server.adoc[leveloffset=+1]
 
+== Add the Application User
+
+The following user must be added to the `ApplicationRealm` to run this quickstart. Make sure you use the username and password specified below as they are required to run this example.
+
+[cols="20%,20%,20%,options="headers"]
+|===
+|Username |Password |Roles
+
+|quickstartUser | quickstartPwd1! | guest |
+|===
+
+To add the above user, open a terminal and execute the following command:
+
+[source,subs="+quotes,attributes+",options="nowrap"]
+----
+$ __{jbossHomeName}__/bin/add-user.sh -a -u 'quickstartUser' -p 'quickstartPwd1!' -g 'guest'
+----
+
+NOTE: For Windows, use the `__{jbossHomeName}__\bin\add-user.bat` script.
+
 [[configure_the_server]]
 == Configure the Server
 
